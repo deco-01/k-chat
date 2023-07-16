@@ -1,4 +1,4 @@
-# README
+<!-- # README
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -21,4 +21,13 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* ... -->
+
+
+## users テーブル
+
+| Column              | Type   | Options                             |
+| ------------------- | ------ | ----------------------------------- |
+| name                | string | null: false                         |
+| email               | string | null: false, unique: true           |
+| encrypted_password  | string | null: false                         |

@@ -1,30 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chat Room</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="head">
-    <h1 class="chat-room-title">Chat room</h1>
-    <div class="button-container">
-      <button class="login-button">log in</button>
-      <button class="signup-button">sign up</button>     
-    </div>
-  </div>
-  <section class="wave-container">
-    <svg class="wave" viewBox="0 0 500 100" preserveAspectRatio="none">
-        <path fill="url(#wave-gradient)" d="M0,100 C150,100 350,0 500,100 L500,00 L0,0 Z"></path>
-        <defs>
-          <linearGradient id="wave-gradient" gradientTransform="rotate(90)">
-            <stop offset="0%" stop-color="#ff8484"></stop>
-            <stop offset="100%" stop-color="#ffd3a8"></stop>
-          </linearGradient>
-      </defs>
-    </svg>
-  </section>
-
-  
   <div id="messages">
     <%= render @messages %>
   </div>

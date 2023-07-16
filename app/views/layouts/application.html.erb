@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>KChat</title>
+    <title>K-Chat</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,37 @@
   </head>
 
   <body>
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <div class="head">
+      <h1 class="chat-room-title">Chat room</h1>
+      <div class="button-container">
+        <% if user_signed_in? %>
+          <%= link_to 'マイページ', user_path(current_user), class: 'my-page-button'%>
+          <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'logout-button' %>
+        <% else %>
+          <%= link_to 'Log in', new_user_session_path, class: 'login-button' %>
+        <% end %>
+        <% if !user_signed_in? %>
+          <%= link_to 'Sign Up',  new_user_registration_path, class: 'signup-button' %>
+        <% end %>       
+      </div>
+    </div>
+    <section class="wave-container">
+      <svg class="wave" viewBox="0 0 500 100" preserveAspectRatio="none">
+          <path fill="url(#wave-gradient)" d="M0,100 C150,100 350,0 500,100 L500,00 L0,0 Z"></path>
+          <defs>
+            <linearGradient id="wave-gradient" gradientTransform="rotate(90)">
+              <stop offset="0%" stop-color="#ff8484"></stop>
+              <stop offset="100%" stop-color="#ffd3a8"></stop>
+            </linearGradient>
+        </defs>
+      </svg>
+    </section>
+  
+
+  
     <%= yield %>
   </body>
 </html>
