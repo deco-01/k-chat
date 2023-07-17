@@ -8,9 +8,11 @@
     <%= render @messages %>
   </div>
   <ul class="message-list"></ul>
-  <form id="form" action="">
-    <input id="input" autocomplete="off" />
-    <button type="submit" class="send-button">送信</button>
-  </form>
+  <div class="send-bar-container">
+    <form class="send-bar" action="">
+      <input id="input" class="input" autocomplete="off" />
+      <button type="submit" class="send-button">送信</button>
+    </form>
+  </div>
 </body>
 </html>
