@@ -14,9 +14,12 @@ https://k-chat.onrender.com
 
 ## テスト用アカウント
 
-・Basic認証ID；hogehoge
-・Basic認証パスワード；hogehoge
+・Basic認証ID：hogehoge
+
+・Basic認証パスワード：hogehoge
+
 ・メールアドレス：1@1
+
 ・パスワード：111111
 
 ## 使用技術
